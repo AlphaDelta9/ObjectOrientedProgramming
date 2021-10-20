@@ -1,33 +1,10 @@
 package fraction;
 
 public class Proper extends Fraction{
-//	private Integer numerator,denominator;
 	public Proper() {
 		// TODO Auto-generated constructor stub
 		super();
 	}
-	
-//	public Mixed(Integer number,Integer numerator,Integer denominator) {
-//		super(numerator+number*denominator,denominator);
-////		this.numerator = numerator+number*denominator;
-////		this.denominator = denominator;
-//	}
-//	public Integer getDenominator() {
-//		return super.getDenominator();
-//	}
-//
-//	public Integer getNumerator() {
-//		return super.getNumerator();
-//	}
-//
-//	public void setNumerator(Integer numerator) {
-//		super.setNumerator(numerator);
-//	}
-//
-//	public void setDenominator(Integer denominator) {
-//		super.setDenominator(denominator);
-//	}
-
 	public Proper(Integer numerator,Integer denominator) {
 		// TODO Auto-generated method stub
 		super(numerator,denominator);
@@ -43,8 +20,6 @@ public class Proper extends Fraction{
 			failSafe=true;
 			while (failSafe) {
 				if(getDenominator()%rank==0&&getNumerator()%rank==0) {
-//					denominator=denominator/rank;
-//					numerator=numerator/rank;
 					setDenominator(getDenominator()/rank);
 					setNumerator(getNumerator()/rank);
 					continue;
@@ -58,23 +33,15 @@ public class Proper extends Fraction{
 			}
 		}while(getNumerator()%rank==0&&getDenominator()%rank==0);
 		if(getNumerator()%getDenominator()==0&&getDenominator()!=1) {
-//			numerator=numerator/denominator;
-//			denominator=denominator/denominator;
 			setNumerator(getNumerator()/getDenominator());
 			setDenominator(getDenominator()/getDenominator());
 			
 		}
 		if(getDenominator()%getNumerator()==0&&getNumerator()!=1) {
-//			denominator=denominator/numerator;
-//			numerator=numerator/numerator;
 			setDenominator(getDenominator()/getNumerator());
 			setNumerator(getNumerator()/getNumerator());
 		}
-//			output=numerator.intValue()+"/"+denominator.intValue();
 		}
-//		else {
-//			output=number+" "+numerator.intValue()+"/"+denominator.intValue();
-//		}
 	}
 
 	public Proper multiply(Proper proper) {
@@ -145,33 +112,4 @@ public class Proper extends Fraction{
 		return new Proper(getNumerator(), getDenominator());
 	}
 
-//	public void multiply(Decimal decimal) {
-//		this.numerator=this.numerator*decimal.getDenomin();
-//		this.denominator=this.denominator*decimal.getNumer();
-//	}
-//
-//	public void divide(Decimal decimal) {
-//		this.numerator=this.numerator*decimal.getNumer();
-//		this.denominator=this.denominator*decimal.getDenomin();
-//	}
-//
-//	public void add(Decimal decimal) {
-//		Integer numerator,denominator;
-//		numerator=this.numerator*decimal.getNumer();
-//		denominator=this.denominator*decimal.getNumer();
-//		decimal.setDenomin(decimal.getDenomin()*this.denominator);
-//		decimal.setNumer(decimal.getNumer()*this.denominator);
-//		this.numerator=numerator+decimal.getDenomin();
-//		this.denominator=denominator;
-//	}
-//
-//	public void subtract(Decimal decimal) {
-//		Integer numerator,denominator;
-//		numerator=this.numerator*decimal.getNumer();
-//		denominator=this.denominator*decimal.getNumer();
-//		decimal.setDenomin(decimal.getDenomin()*this.denominator);
-//		decimal.setNumer(decimal.getNumer()*this.denominator);
-//		this.numerator=numerator-decimal.getDenomin();
-//		this.denominator=denominator;
-//	}
 }

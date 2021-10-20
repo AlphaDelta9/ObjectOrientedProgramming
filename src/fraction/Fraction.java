@@ -2,9 +2,7 @@ package fraction;
 
 public abstract class Fraction implements Comparable<Fraction>{
 	private Integer numerator,denominator;
-	private Integer number;
 	public Fraction() {
-		super();
 	}
 	public Fraction(Integer numerator,Integer denominator) {
 		this.numerator=numerator;
@@ -21,14 +19,6 @@ public abstract class Fraction implements Comparable<Fraction>{
 	}
 	public void setDenominator(Integer denominator) {
 		this.denominator = denominator;
-	}
-
-	public Integer getNumber() {
-		return number;
-	}
-
-	public void setNumber(Integer number) {
-		this.number = number;
 	}
 
 	@Override

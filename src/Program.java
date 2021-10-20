@@ -243,7 +243,7 @@ public class Program{
 //					try {
 //						System.out.print((outputList.get(i).getNumerator()/outputList.get(i).getDenominator())+" "+(outputList.get(i).getNumerator()%outputList.get(i).getDenominator())+"/"+outputList.get(i).getDenominator());
 //					} catch (Exception e) {
-//						System.out.print(outputList.get(i).getNumber()+" "+outputList.get(i).getNumerator()+"/"+outputList.get(i).getDenominator());
+//						System.out.print(outputList.get(i).getNumerator()/outputList.get(i).getDenominator()+" "+outputList.get(i).getNumerator()+"/"+outputList.get(i).getDenominator());
 //					}
 //				}
 //				if(outputList.get(i).compareTo(outputList.get(i+1))==0) {
@@ -265,25 +265,15 @@ public class Program{
 //					try {
 //						System.out.println((outputList.get(i).getNumerator()/outputList.get(i).getDenominator())+" "+(outputList.get(i).getNumerator()%outputList.get(i).getDenominator())+"/"+outputList.get(i).getDenominator());
 //					} catch (Exception e) {
-//						System.out.println(outputList.get(i).getNumber()+" "+outputList.get(i).getNumerator()+"/"+outputList.get(i).getDenominator());
+//						System.out.println(outputList.get(i).getNumerator()/outputList.get(i).getDenominator()+" "+outputList.get(i).getNumerator()+"/"+outputList.get(i).getDenominator());
 //					}
 //				}
 //		}
 		System.out.println();
 //		Collections.sort(outputList);
 		for (Fraction output : outputList) {
-			try {
 				System.out.println("Mixed Fraction: "+output.getNumerator()/output.getDenominator()+" "+output.getNumerator()%output.getDenominator()+"/"+output.getDenominator());
 				System.out.println("Fraction: "+output.getNumerator()+"/"+output.getDenominator());
-			}catch (Exception e) {
-				if(output.getClass().equals(Mixed.class)) {
-					System.out.println("Mixed Fraction: "+output.getNumber()+" "+output.getNumerator()+"/"+output.getDenominator());
-					System.out.println("Fraction: "+output.getNumerator()+"/"+output.getDenominator());
-				}else {
-					System.out.println("Mixed Fraction: 0 "+output.getNumerator()+"/"+output.getDenominator());
-					System.out.println("Fraction: "+output.getNumerator()+"/"+output.getDenominator());
-				}
-			}
 			System.out.println();
 		}
 		scan.close();
